@@ -1,22 +1,22 @@
-const { getMetadataArgsStorage } = require("typeorm");
+const { getMetadataArgsStorage } = require('typeorm');
 
 module.exports = {
-  type: 'mysql',
+  type: 'postgres',
   host: 'localhost',
-  port: 3306,
-  username: 'root',
-  password: 'qwerty1',
-  database: 'realworld_db',
+  port: 5432,
+  username: 'postgres',
+  password: 'example',
+  database: 'dev',
   synchronize: false,
-  entities: getMetadataArgsStorage().tables.map(tbl => tbl.target),
+  entities: getMetadataArgsStorage().tables.map((tbl) => tbl.target),
   timezone: 'Z',
   bigNumberStrings: false,
-  migrations: ["migrations/*.js"],
-  migrationsRun: false,
+  migrations: ['migrations/*.js'],
+  migrationsRun: true,
   cli: {
-    migrationsDir: "migrations"
+    migrationsDir: 'migrations',
   },
   extra: {
     // connectionLimit: 5
-  }
-}
+  },
+};

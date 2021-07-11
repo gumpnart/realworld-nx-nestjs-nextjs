@@ -67,6 +67,7 @@
     "ngx-custom-validators": "^11.0.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "pg": "^8.6.0",
     "r7insight_js": "^1.0.0",
     "reflect-metadata": "^0.1.13",
     "rotating-file-stream": "^2.1.5",
